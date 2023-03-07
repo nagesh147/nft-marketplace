@@ -16,14 +16,22 @@ function NftCard({ nft }) {
 
   return (
     <>
-      <div className="nft-card" onClick={handleModalOpen}>
-        <img className="nft-image" src={nft.image} alt={nft.name} />
+      <div className="nft-card">
+        <img
+          className="nft-image"
+          src={nft.image}
+          alt={nft.name}
+          onClick={handleModalOpen}
+        />
         <div className="nft-details">
           <h2 className="nft-name">{nft.name}</h2>
           <p className="nft-owner">Owner: {nft.owner.name}</p>
         </div>
+        {isModalOpen && <NftModal nft={nft} onClose={handleCloseModal} />}
       </div>
-      {isModalOpen && <NftModal nft={nft} onClose={handleCloseModal} />}
+      {/* <div>
+          {isModalOpen && <NftModal nft={nft} onClose={handleCloseModal} />}
+        </div> */}
     </>
   )
 }
@@ -34,7 +42,6 @@ NftCard.propTypes = {
     image: PropTypes.string.isRequired,
     owner: PropTypes.shape({
       name: PropTypes.string.isRequired,
-      address: PropTypes.string.isRequired,
     }),
     description: PropTypes.string.isRequired,
     purchaseUrl: PropTypes.string.isRequired,
