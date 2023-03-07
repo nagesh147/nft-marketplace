@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import '../../styles/NftCard.css'
+import NftModal from './NftModal'
 
 function NftCard({ nft }) {
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -9,34 +10,21 @@ function NftCard({ nft }) {
     setIsModalOpen(true)
   }
 
-  const handleModalMouseLeave = () => {
+  const handleCloseModal = () => {
     setIsModalOpen(false)
   }
+
   return (
-    <div className="nft-card" onMouseEnter={handleModalOpen}>
-      <img className="nft-image" src={nft.image} alt={nft.name} />
-      <div className="nft-details">
-        <h2 className="nft-name">{nft.name}</h2>
-        <p className="nft-owner">Owner: {nft.owner.name}</p>
-      </div>
-      {isModalOpen && (
-        <div className="nft-modal" onMouseLeave={handleModalMouseLeave}>
-          <div className="modal-content">
-            <h2>{nft.name}</h2>
-            <p>Owner: {nft.owner.name}</p>
-            <p>Description: {nft.description}</p>
-            <a
-              className="purchase-button"
-              href={nft.purchaseUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Purchase on OpenSea
-            </a>
-          </div>
+    <>
+      <div className="nft-card" onClick={handleModalOpen}>
+        <img className="nft-image" src={nft.image} alt={nft.name} />
+        <div className="nft-details">
+          <h2 className="nft-name">{nft.name}</h2>
+          <p className="nft-owner">Owner: {nft.owner.name}</p>
         </div>
-      )}
-    </div>
+      </div>
+      {isModalOpen && <NftModal nft={nft} onClose={handleCloseModal} />}
+    </>
   )
 }
 
@@ -46,6 +34,7 @@ NftCard.propTypes = {
     image: PropTypes.string.isRequired,
     owner: PropTypes.shape({
       name: PropTypes.string.isRequired,
+      address: PropTypes.string.isRequired,
     }),
     description: PropTypes.string.isRequired,
     purchaseUrl: PropTypes.string.isRequired,

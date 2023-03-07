@@ -8,21 +8,21 @@ function NftModal(props) {
   return (
     <div className="nft-modal">
       <div className="modal-content">
-        <span className="close" onClick={onClose}>
+        <span className="nft-modal-close" onClick={onClose}>
           &times;
         </span>
-        <img src={nft.image} alt={nft.name} />
-        <div className="nft-details">
-          <h3>{nft.name}</h3>
-          <p>{nft.description}</p>
-          <div className="nft-owner">
-            <span>Owner: </span>
-            <span>{nft.owner}</span>
-          </div>
-          <a href={nft.purchaseUrl} target="_blank" rel="noreferrer">
-            <button className="buy-button">Buy on OpenSea</button>
-          </a>
-        </div>
+        <h2>{nft.name}</h2>
+        <p>Owner: {nft.owner.name}</p>
+        <p>Address: {nft.owner.address}</p>
+        <p>Description: {nft.description}</p>
+        <a
+          className="purchase-button"
+          href={nft.purchaseUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Purchase on OpenSea
+        </a>
       </div>
     </div>
   )
@@ -33,7 +33,10 @@ NftModal.propTypes = {
     name: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
-    owner: PropTypes.string.isRequired,
+    owner: PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      address: PropTypes.string.isRequired,
+    }),
     purchaseUrl: PropTypes.string.isRequired,
   }).isRequired,
   onClose: PropTypes.func.isRequired,
