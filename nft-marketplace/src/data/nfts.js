@@ -2,7 +2,7 @@ const nfts = [
   {
     id: 1,
     name: 'CryptoKitty #324',
-    image: 'https://cryptokitties.co/images/kitty-324.svg',
+    image: 'https://rb.gy/rdlh0x',
     description: 'A cute CryptoKitty with a rare color scheme.',
     owner: {
       name: 'Alice',
@@ -14,7 +14,7 @@ const nfts = [
   {
     id: 2,
     name: 'CryptoPunk #6457',
-    image: 'https://www.larvalabs.com/public/images/cryptopunks/punk6457.png',
+    image: 'https://rb.gy/nwekyk',
     description: 'A rare CryptoPunk with a distinctive hairstyle.',
     owner: {
       name: 'Bob',
@@ -26,7 +26,7 @@ const nfts = [
   {
     id: 3,
     name: 'Bored Ape #413',
-    image: 'https://boredapeyachtclub.com/img/ape-413.png',
+    image: 'https://rb.gy/wbxckm',
     description: 'A Bored Ape with a stylish hat and sunglasses.',
     owner: {
       name: 'Charlie',
@@ -39,7 +39,7 @@ const nfts = [
   {
     id: 4,
     name: 'CryptoKitty #1208418',
-    image: 'https://storage.googleapis.com/crypto-collectibles/v2/1208418.png',
+    image: 'https://rb.gy/0wbifk',
     description: 'A rare CryptoKitty with a unique color scheme and pattern.',
     owner: {
       name: 'David',
