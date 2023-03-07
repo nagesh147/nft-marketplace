@@ -9,15 +9,11 @@ function NftCard({ nft }) {
     setIsModalOpen(true)
   }
 
-  const handleModalClose = () => {
-    setIsModalOpen(false)
-  }
-
   const handleModalMouseLeave = () => {
     setIsModalOpen(false)
   }
   return (
-    <div className="nft-card" onClick={handleModalOpen}>
+    <div className="nft-card" onMouseEnter={handleModalOpen}>
       <img className="nft-image" src={nft.image} alt={nft.name} />
       <div className="nft-details">
         <h2 className="nft-name">{nft.name}</h2>
@@ -26,9 +22,6 @@ function NftCard({ nft }) {
       {isModalOpen && (
         <div className="nft-modal" onMouseLeave={handleModalMouseLeave}>
           <div className="modal-content">
-            <span className="close" onClick={handleModalClose}>
-              &times;
-            </span>
             <h2>{nft.name}</h2>
             <p>Owner: {nft.owner.name}</p>
             <p>Description: {nft.description}</p>
