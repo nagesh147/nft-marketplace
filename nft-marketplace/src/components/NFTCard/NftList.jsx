@@ -1,13 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import NftCard from './NftCard'
-import nftsData from '../../data/nfts'
 import '../../styles/NftList.css'
 
-function NftList() {
+function NftList({ nfts }) {
   return (
     <div className="nft-list">
-      {nftsData.map((nft) => (
+      {nfts.map((nft) => (
         <NftCard key={nft.id} nft={nft} />
       ))}
     </div>
@@ -19,12 +18,19 @@ NftList.propTypes = {
     PropTypes.shape({
       id: PropTypes.number.isRequired,
       name: PropTypes.string.isRequired,
-      description: PropTypes.string.isRequired,
       image: PropTypes.string.isRequired,
-      owner: PropTypes.string.isRequired,
+      owner: PropTypes.oneOfType([
+        PropTypes.string.isRequired,
+        PropTypes.shape({
+          name: PropTypes.string.isRequired,
+          address: PropTypes.string.isRequired,
+          profileImage: PropTypes.string.isRequired,
+        }),
+      ]),
+      description: PropTypes.string.isRequired,
       purchaseUrl: PropTypes.string.isRequired,
     })
-  ),
+  ).isRequired,
 }
 
 export default NftList

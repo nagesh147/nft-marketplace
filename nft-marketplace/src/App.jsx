@@ -11,6 +11,8 @@ function App() {
   }
 
   const handleModalClose = () => {
+    alert()
+    console.log('handle modal close')
     setSelectedNft(null)
   }
 
