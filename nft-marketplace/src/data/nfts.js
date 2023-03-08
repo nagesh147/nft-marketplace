@@ -4,7 +4,7 @@ const nfts = [
     name: 'Mystery Moca',
     image: 'https://rb.gy/zo7kwm',
     description:
-      'Mocaverse is the Animoca Brands membership NFT collection of 8,888 unique beings that thrive in unity: The Mocas.',
+      'Mocaverse is the Animoca Brands membership NFT collection: The Mocas.',
     owner: {
       name: 'Yadgen',
       address: '0x59325733eb952a92e069C87F0A6168b29E80627f',
@@ -15,7 +15,7 @@ const nfts = [
 
   {
     id: 11,
-    name: 'CryptoKitty #324',
+    name: 'CryptoKitty',
     image: 'https://rb.gy/rdlh0x',
     description: 'A cute CryptoKitty with a rare color scheme.',
     owner: {
@@ -39,7 +39,7 @@ const nfts = [
   },
   {
     id: 13,
-    name: 'Bored Ape #413',
+    name: 'Bored Ape',
     image: 'https://rb.gy/wbxckm',
     description: 'A Bored Ape with a stylish hat and sunglasses.',
     owner: {
@@ -52,7 +52,7 @@ const nfts = [
   // Real-time data for CryptoKitties #1208418
   {
     id: 14,
-    name: 'CryptoKitty #1208418',
+    name: 'CryptoKitty',
     image: 'https://rb.gy/0wbifk',
     description: 'A rare CryptoKitty with a unique color scheme and pattern.',
     owner: {

@@ -12,9 +12,20 @@ function NftModal(props) {
           &times;
         </span>
         <h2>{nft.name}</h2>
-        <p>Owner: {nft.owner.name}</p>
+        <div>
+          <span>
+            <img
+              src={nft.owner.profileImage}
+              alt={nft.owner.name}
+              style={{ borderRadius: '50%', width: '55px', height: '55px' }}
+            />
+          </span>
+          <span style={{ position: 'relative', bottom: '20px', left: '15px' }}>
+            Owned by {nft.owner.name}
+          </span>
+        </div>
+        <p>{nft.description}</p>
         <p>Address: {nft.owner.address}</p>
-        <p>Description: {nft.description}</p>
         <a
           className="purchase-button"
           href={nft.purchaseUrl}
