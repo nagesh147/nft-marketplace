@@ -18,7 +18,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="app-title">My NFT Collection</h1>
+      <h1 className="app-title">NFT Collection</h1>
       <NftList nfts={nftsData} onCardClick={handleCardClick} />
       {selectedNft && <NftModal nft={selectedNft} onClose={handleModalClose} />}
     </div>

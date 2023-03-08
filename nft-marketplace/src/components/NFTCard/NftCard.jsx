@@ -25,13 +25,9 @@ function NftCard({ nft }) {
         />
         <div className="nft-details">
           <h2 className="nft-name">{nft.name}</h2>
-          {/* <p className="nft-owner">Owner: {nft.owner.name}</p> */}
         </div>
         {isModalOpen && <NftModal nft={nft} onClose={handleCloseModal} />}
       </div>
-      {/* <div>
-          {isModalOpen && <NftModal nft={nft} onClose={handleCloseModal} />}
-        </div> */}
     </>
   )
 }

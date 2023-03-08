@@ -8,7 +8,7 @@ const nfts = [
     owner: {
       name: 'Yadgen',
       address: '0x59325733eb952a92e069C87F0A6168b29E80627f',
-      profileImage: 'https://i.pravatar.cc/150?img=1',
+      profileImage: 'https://i.pravatar.cc/150?img=9',
     },
     purchaseUrl: 'https://opensea.io/assets/cryptokitties/324',
   },
@@ -21,7 +21,7 @@ const nfts = [
     owner: {
       name: 'Alice',
       address: '0x5F5c5a229D16AdB66740fE1C7f9C9e2d78f1B069',
-      profileImage: 'https://i.pravatar.cc/150?img=1',
+      profileImage: 'https://i.pravatar.cc/150?img=8',
     },
     purchaseUrl: 'https://opensea.io/assets/cryptokitties/324',
   },

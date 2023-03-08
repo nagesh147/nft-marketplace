@@ -94,19 +94,3 @@
   font-weight: bold;
   cursor: pointer;
 }
-/* 
-.purchase-button {
-  display: block;
-  margin-top: 24px;
-  padding: 12px 24px;
-  background-color: #f50057;
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 32px;
-  transition: all 0.3s ease;
-}
-
-.purchase-button:hover {
-  background-color: #ff4081;
-} */
